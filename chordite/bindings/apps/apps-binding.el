@@ -2,12 +2,15 @@
 ;; ----------------------------------------------------------------------------
 ;; Root-level binding config for the apps node
 ;; Leader key: a
+;; Node name: node-apps
 ;; Child nodes:
 ;; ----------------------------------------------------------------------------
 
-(define-prefix-command 'node-apps)
-(global-set-key "\C-a" 'node-apps)
+(defvar nodename 'node-apps)
 
-(define-key node-apps "c" 'calc)
+(define-prefix-command nodename)
+(global-set-key "\C-a" nodename)
+
+(define-key nodename "c" 'calc)
 
 (provide 'apps-binding)

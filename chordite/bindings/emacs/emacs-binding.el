@@ -2,12 +2,15 @@
 ;; ----------------------------------------------------------------------------
 ;; Root-level binding config for the emacs node
 ;; Leader key: e
+;; Node name: node-emacs
 ;; Child nodes:
 ;; ----------------------------------------------------------------------------
 
-(define-prefix-command 'node-emacs)
-(global-set-key "\C-e" 'node-emacs)
+(defvar nodename 'node-emacs)
 
-(define-key node-emacs "k" 'save-buffers-kill-emacs)
+(define-prefix-command nodename)
+(global-set-key "\C-e" nodename)
+
+(define-key nodename "k" 'save-buffers-kill-emacs)
 
 (provide 'emacs-binding)
