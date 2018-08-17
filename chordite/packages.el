@@ -9,6 +9,7 @@
 (defvar chordite-core-packages
   '(paradox
     which-key
+    ivy
    )
   )
 
