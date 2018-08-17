@@ -6,7 +6,7 @@
 ;; Child nodes:
 ;; ----------------------------------------------------------------------------
 
-(defvar nodename 'node-apps)
+(setq nodename 'node-apps)
 
 (define-prefix-command nodename)
 (global-set-key "\C-a" nodename)
