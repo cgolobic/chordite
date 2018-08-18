@@ -1,8 +1,16 @@
 ;; bindings.el
 
-(add-to-list 'load-path "~/.emacs.d/chordite/bindings/apps")
-(add-to-list 'load-path "~/.emacs.d/chordite/bindings/emacs")
-(add-to-list 'load-path "~/.emacs.d/chordite/bindings/file")
+(defvar bindings
+  '(
+    "apps"
+    "emacs"
+    "file"
+  )
+)
+
+(dolist (binding bindings)
+  (add-to-list 'load-path (concat "~/.emacs.d/chordite/bindings/" binding))
+)
 
 ;; let's start by cleaning up global bindings
 ;; C-x
